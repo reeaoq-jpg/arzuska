@@ -1,0 +1,60 @@
+/* GLOBAL */
+:root { --navy: #0a192f; --coral: #ff7f50; --butter: #fcf6e5; --paper: #fdfaf5; }
+body, html { margin: 0; padding: 0; height: 100%; overflow: hidden; font-family: 'Inter', sans-serif; }
+
+.page { position: absolute; width: 100%; height: 100vh; transition: transform 0.8s cubic-bezier(0.85, 0, 0.15, 1); background: #f8f5f2; visibility: hidden; opacity: 0; }
+.page.active { visibility: visible; opacity: 1; transform: translateY(0); z-index: 10; }
+
+/* TICKETS */
+.ticket-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; padding: 0 60px; }
+.ticket { height: 350px; padding: 30px; color: white; cursor: pointer; border-radius: 4px; display: flex; flex-direction: column; justify-content: space-between; }
+.t-charcoal { background: #2d3436; } .t-sage { background: #636e72; } .t-clay { background: #a66d5a; } .t-gold { background: #b39b72; }
+
+/* MARKETING THEMES */
+.marketing-bg { background-color: var(--butter) !important; }
+.social-media-bg { background-color: #f9f4e8 !important; }
+.digital-bg { background-color: var(--navy) !important; color: white; }
+.content-bg { background-color: #fcfaf2 !important; }
+.navy-bg { background-color: var(--navy) !important; color: white; }
+
+/* NOTEBOOK */
+.notebook-bg { background: var(--coral) !important; display: flex; align-items: center; justify-content: center; }
+.notebook { width: 90%; max-width: 1000px; height: 80vh; background: var(--paper); display: flex; border-radius: 8px; box-shadow: 0 40px 80px rgba(0,0,0,0.3); }
+
+/* QR CARDS */
+.qr-card { cursor: pointer; transition: 0.4s; }
+.qr-card.zoom { transform: scale(1.1); z-index: 100; }
+.card-paper { background: white; padding: 20px; border: 1px solid #eee; text-align: center; }
+
+/* UI ELEMENTS */
+.close-btn-dark, .close-btn-light { position: absolute; top: 30px; right: 30px; padding: 10px 20px; border-radius: 30px; cursor: pointer; border: none; z-index: 100; }
+.close-btn-dark { background: #1a1a1a; color: white; }
+.close-btn-light { background: white; color: black; }
+
+/* TYPING */
+.typing-target { color: var(--coral); font-family: 'Playfair Display'; font-size: 3rem; }
+.cert-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.cert-img {
+    background: var(--glass);
+    border-radius: 15px;
+    overflow: hidden;
+    cursor: zoom-in;
+    transition: 0.4s;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.cert-img img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+}
+
+.cert-img:hover {
+    transform: scale(1.05);
+    border-color: var(--gold);
+}
